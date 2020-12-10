@@ -2,12 +2,54 @@ body {
   background-color: rgb(155, 209, 185);
 }
 
-.navbar {
-  background: rgb(212, 212, 233);
+.titleBar {
+  background: rgb(139, 139, 255);
   margin-bottom: 20px;
   text-align: center;
 }
+/* ADD MOVIES BAR */
 
+.addtoMovies {
+  background-color: rgb(155, 209, 185);;
+  display: flex;
+  flex-direction: row;
+  border-color: black;
+  border-width: 10px;
+  padding-left: 20%;
+  padding-right: 60%;
+}
+
+.addtoMoviesBox {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-color: black;
+  border-width: 10px;
+  outline: auto;
+}
+
+/* SEARCH BAR */
+
+.search {
+  background-color: rgb(155, 209, 185);;
+  display: flex;
+  flex-direction: row;
+  border-color: black;
+  border-width: 10px;
+  padding-left: 20%;
+  padding-right: 60%;
+}
+.searchBox {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-color: black;
+  border-width: 10px;
+  outline: auto;
+}
+
+
+/* MOVIES BOX */
 
 .movie-list {
   background-color: rgb(155, 209, 185);;
