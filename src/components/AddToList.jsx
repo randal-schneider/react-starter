@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-class Search extends React.Component {
+class AddToList extends React.Component {
   constructor(props) {
     super(props);
 
@@ -9,19 +9,19 @@ class Search extends React.Component {
       value: ''
     };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
+    this.handleSubmission = this.handleSubmission.bind(this);
   }
 
-  handleChange(event) {
+  handleAdd (event) {
     this.setState({
       value: event.target.value
     })
   }
 
-  handleSubmit() {
+  handleSubmission () {
     // console.log(this.state.value);
-    this.props.searchValue(this.state.value);
+    this.props.addValue(this.state.value);
     this.setState({
       value: ''
     })
@@ -34,14 +34,14 @@ class Search extends React.Component {
       <div className='searchBox'>
         <input
           type="text"
-          placeholder="Search For Movies"
+          placeholder="Add Movies"
           value={this.state.value}
-          onChange={this.handleChange}>
+          onChange={this.handleAdd}>
         </input>
         <button
-          onClick={this.handleSubmit}
+          onClick={this.handleSubmission}
           type="submit">
-            <i className="fa fa-search"></i>
+            <i className="fa fa-car"></i>
         </button>
       </div>
     )
@@ -49,4 +49,4 @@ class Search extends React.Component {
 }
 
 
-export default Search
+export default AddToList
