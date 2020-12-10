@@ -8,8 +8,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      movies: [],
-      searched: false
+      searched: []
     };
   }
 
@@ -19,7 +18,18 @@ class App extends React.Component {
   //   })
   // }
 
-  render(){
+  // searched(value) {
+
+  //   if (this.movies.title.contains(value) {
+  //     this.setState({
+  //       searched: [...value]
+  //     })
+  //   })
+  // }
+
+
+
+  render() {
     console.log(movies);
     return (
       <div>
@@ -31,13 +41,9 @@ class App extends React.Component {
         </div>
         <div className='search'>
           <Search />
-          <div className='searchBox'>
-            <input type="text" placeholder="Search For Movies"></input>
-            <button type="submit"><i className="fa fa-search"></i></button>
-          </div>
         </div>
         <div className='movie-list'>
-          <MovieList movies={movies} text={'quote'} />
+          <MovieList movies={movies} />
         </div>
       </div>
   )}
