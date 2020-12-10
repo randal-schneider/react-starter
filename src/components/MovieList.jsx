@@ -3,7 +3,7 @@ import MovieListEntry from './MovieListEntry.jsx'
 
 //map over our movies array
 var MovieList = (props) => {
-console.log(props);
+// console.log(props);
   return (
     <div>
       {props.movies.map((title) =>
