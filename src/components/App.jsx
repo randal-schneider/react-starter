@@ -43,7 +43,7 @@ class App extends React.Component {
       if (movie.title.includes(value)) {
         console.log('after if statement', movie.title);
         this.setState({
-          searched: [...this.state.searched, movie]
+          searched: [movie, ...this.state.searched, ]
         }, () => console.log('state of searched', this.state.searched))
       };
     })
@@ -72,7 +72,7 @@ class App extends React.Component {
           <button
             onClick={this.resetSearchedState}
             type="submit">
-              <i className="fa fa-search"></i>
+              <i className="fa fa-trash" aria-hidden="true"></i>
           </button>
         </div>
         <div className='movie-list'>
