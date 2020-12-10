@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(155, 209, 185);
+  background-color: rgb(77, 33, 33);
 }
 
 .titleBar {
@@ -10,7 +10,7 @@ body {
 /* ADD MOVIES BAR */
 
 .addtoMovies {
-  background-color: rgb(155, 209, 185);;
+  background-color: rgb(77, 33, 33);;
   display: flex;
   flex-direction: row;
   border-color: black;
@@ -31,7 +31,7 @@ body {
 /* SEARCH BAR */
 
 .search {
-  background-color: rgb(155, 209, 185);;
+  background-color: rgb(77, 33, 33);;
   display: flex;
   flex-direction: row;
   border-color: black;
@@ -52,7 +52,7 @@ body {
 /* MOVIES BOX */
 
 .movie-list {
-  background-color: rgb(155, 209, 185);;
+  background-color: rgb(77, 33, 33);;
   display: flex;
   flex-direction: column;
   border-color: black;
@@ -76,4 +76,5 @@ body {
 .button {
   border-color: black;
   border-width: 10px;
+  outline: auto;
 }
