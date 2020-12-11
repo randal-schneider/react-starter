@@ -20,7 +20,6 @@ class AddToList extends React.Component {
   }
 
   handleSubmission () {
-    // console.log(this.state.value);
     this.props.addValue(this.state.value);
     this.setState({
       value: ''

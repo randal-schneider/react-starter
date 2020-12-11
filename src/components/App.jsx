@@ -4,13 +4,15 @@ import MovieList from './MovieList.jsx'
 import Search from './Search.jsx'
 import AddToList from './AddToList.jsx';
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       searched: [],
-      movies: []
+      movies: [],
+      haveWatched: false
     };
 
     this.resetSearchedState = this.resetSearchedState.bind(this);
@@ -19,14 +21,13 @@ class App extends React.Component {
   }
 
   addToMovieList(value) {
-    console.log(value);
     let movie = {
       title: value
     };
 
     this.setState({
-      movies: [movie, ...this.state.movies]
-    }, () => console.log('from addToMovieList ', this.state.movies))
+      movies: [movie, ...this.state.movies],
+    })
   };
 
   resetSearchedState() {
@@ -36,23 +37,20 @@ class App extends React.Component {
   }
 
   searchMovieList(value) {
-    // console.log('from SearchMovie', value);
-    console.log(movies);
-    this.state.movies.filter(movie => {
-      console.log('search movielist', movie, this.state.searched);
+    let results = this.state.movies.filter(movie => {
       if (movie.title.includes(value)) {
-        console.log('after if statement', movie.title);
-        this.setState({
-          searched: [movie, ...this.state.searched, ]
-        }, () => console.log('state of searched', this.state.searched))
-      };
+        return movie;
+      }
+    })
+    this.setState({
+      searched: results
     })
   }
 
 
 
   render() {
-    // console.log(movies);
+
     let movieList;
     if (this.state.searched.length < 1) {
       movieList = <MovieList movies={this.state.movies} />;
@@ -62,6 +60,10 @@ class App extends React.Component {
 
     return (
       <div>
+        <div>
+          <button className='button'>Watched</button>
+          <button className='button'>To Watch</button>
+        </div>
         <div className='addtoMovies'>
           <div className='searchBox'>
             <AddToList addValue={this.addToMovieList}/>
@@ -78,6 +80,7 @@ class App extends React.Component {
         <div className='movie-list'>
           {movieList}
         </div>
+
       </div>
   )}
 }

@@ -74,7 +74,18 @@ body {
 }
 
 .button {
-  border-color: black;
-  border-width: 10px;
-  outline: auto;
+  display: flex;
+  flex-direction: row;
+  /* background-color: #4CAF50; Green */
+  border: #4CAF50;
+  color: rgb(14, 9, 9);
+  padding: 15px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+
 }
+/* TABS TABS TABS */
+

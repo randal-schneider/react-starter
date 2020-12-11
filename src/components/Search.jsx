@@ -20,7 +20,6 @@ class Search extends React.Component {
   }
 
   handleSubmit() {
-    // console.log(this.state.value);
     this.props.searchValue(this.state.value);
     this.setState({
       value: ''
