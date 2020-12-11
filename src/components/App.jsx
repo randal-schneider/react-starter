@@ -78,7 +78,7 @@ class App extends React.Component {
           </button>
         </div>
         <div className='movie-list'>
-          {movieList}
+            {movieList}
         </div>
 
       </div>

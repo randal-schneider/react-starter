@@ -1,10 +1,10 @@
 import React from 'react';
 
 var MovieListEntry = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <div className='movie-box'>
-      <ul> {props.title.title} </ul>
+      <ul> {props.title.title} <button className='watched'>Watched</button></ul>
     </div>
   )
 }
