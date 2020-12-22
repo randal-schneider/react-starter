@@ -1,0 +1,61 @@
+import React from 'react';
+
+class Search extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      value: '',
+      search: []
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.changeSearchedState = this.changeSearchedState.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      value: event.target.value
+    })
+  }
+
+  handleSubmit() {
+    this.props.searchValue(this.state.value);
+    this.setState({
+      value: ''
+    })
+  }
+
+  changeSearchedState() {
+    this.props.searchedState(this.state.search);
+  }
+
+
+  render() {
+
+
+    return (
+      <div className='searchBox'>
+        <input
+          type="text"
+          placeholder="Search For Movies"
+          value={this.state.value}
+          onChange={this.handleChange}>
+        </input>
+        <button
+          onClick={this.handleSubmit}
+          type="submit">
+          <i className="fa fa-search"></i>
+        </button>
+        <button
+          onClick={this.changeSearchedState}
+          type="submit">
+          <i className="fa fa-trash" aria-hidden="true"></i>
+        </button>
+      </div>
+    )
+  }
+}
+
+
+export default Search;

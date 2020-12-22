@@ -1,0 +1,78 @@
+body {
+  background-color: rgb(33, 40, 77);
+}
+
+.titleBar {
+  background: rgb(153, 255, 139);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+/* MovieList BOX -------------------------------*/
+
+
+.movieList {
+  background-color: rgb(33, 40, 77);
+  display: flex;
+  flex-direction: column;
+  border-color: black;
+  border-width: 10px;
+  padding-right: 20%;
+  padding-top: 2%;
+  float: left;
+}
+
+.movieBox {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-color: black;
+  border-width: 10px;
+  margin: auto;
+  padding: 2%;
+  outline: auto;
+  border-spacing: 3px;
+  width: 650px;
+}
+
+/* Search Box -------------------------------*/
+
+.search {
+  background-color: rgb(33, 40, 77);
+  display: flex;
+  flex-direction: row;
+  border-color: black;
+  border-width: 10px;
+  padding-bottom: 5px;
+  /* padding-right: 20%; */
+}
+
+.searchBox {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-color: black;
+  border-width: 10px;
+  outline: auto;
+}
+
+/* AddToList Box -------------------------------*/
+
+.addToList {
+  background-color: rgb(33, 40, 77);
+  display: flex;
+  flex-direction: row;
+  border-color: black;
+  border-width: 10px;
+  /* padding-right: 20%; */
+}
+
+.addToListBox {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  border-color: black;
+  border-width: 10px;
+  outline: auto;
+}
