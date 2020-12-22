@@ -20,6 +20,7 @@ body {
   border-width: 10px;
   padding-right: 20%;
   padding-top: 2%;
+  margin-top: 50px;
   float: left;
 }
 
@@ -75,4 +76,31 @@ body {
   border-color: black;
   border-width: 10px;
   outline: auto;
+}
+
+/* Watch and To Watch Buttons ----------------------*/
+
+.watch {
+  flex-direction: column;
+  border: 1px outset blue;
+  text-align: center;
+  font-weight: bold;
+  height:30px;
+  width:70px;
+  margin-top: 5px;
+  cursor:pointer;
+  float:left;
+}
+
+.toWatch {
+  flex-direction: column;
+  border: 1px outset blue;
+  text-align: center;
+  font-weight: bold;
+  height:30px;
+  width:70px;
+  margin-top: 5px;
+  margin-left: 5px;
+  cursor:pointer;
+  float:left;
 }

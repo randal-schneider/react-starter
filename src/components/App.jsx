@@ -10,7 +10,8 @@ class App extends React.Component {
 
     this.state = {
       searched: [],
-      movies: []
+      movies: [],
+      watched: false
     };
 
     this.searchMovieList = this.searchMovieList.bind(this);
@@ -44,6 +45,10 @@ class App extends React.Component {
     let movie = {
       title: value
     };
+
+    this.setState({
+      movies: [movie, ...this.state.movies]
+    })
   }
 
   render(){
@@ -62,6 +67,10 @@ class App extends React.Component {
         </div>
         <div className="addToList">
           <AddToList addValue={this.addMovieToList}/>
+        </div>
+        <div>
+          <button className="watch">Watch</button>
+          <button className="toWatch">ToWatch</button>
         </div>
         <div className='movieList'>
           {movieList}

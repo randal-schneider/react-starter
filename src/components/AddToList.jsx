@@ -21,6 +21,9 @@ class AddToList extends React.Component {
   }
 
   handleSubmits() {
+    if (!this.state.value) {
+      return;
+    }
     this.props.addValue(this.state.value);
     this.setState({
       value: ''
@@ -47,9 +50,6 @@ class AddToList extends React.Component {
     )
   }
 }
-
-
-
 
 
 export default AddToList;
