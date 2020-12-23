@@ -17,6 +17,8 @@ class App extends React.Component {
     this.searchMovieList = this.searchMovieList.bind(this);
     this.resetSearchedState = this.resetSearchedState.bind(this);
     this.addMovieToList = this.addMovieToList.bind(this);
+    this.handleWatch = this.handleWatch.bind(this);
+    this.handleToWatch = this.handleToWatch.bind(this);
   }
 
   searchMovieList(value) {
@@ -51,11 +53,25 @@ class App extends React.Component {
     })
   }
 
+  handleWatch(event) {
+    this.setState({
+      watched: true
+      })
+    console.log(this.state.watched);
+  }
+
+  handleToWatch(event) {
+    this.setState({
+      watched: false
+    })
+    console.log(this.state.watched);
+  }
+
   render(){
-    console.log(this.state.movies);
+
     let movieList;
     if (this.state.searched.length < 1) {
-      movieList = <MovieList movies={this.state.movies}/>;
+      movieList = <MovieList movies={this.state.movies} />;
     } else {
       movieList = <MovieList movies={this.state.searched}/>;
     }
@@ -69,14 +85,19 @@ class App extends React.Component {
           <AddToList addValue={this.addMovieToList}/>
         </div>
         <div>
-          <button className="watch">Watch</button>
-          <button className="toWatch">ToWatch</button>
+          <button className="watch"
+            onClick={this.handleWatch}>
+            Watch</button>
+          <button className="toWatch"
+            onClick={this.handleToWatch}>
+            ToWatch</button>
         </div>
         <div className='movieList'>
           {movieList}
         </div>
       </div>
-  )}
+    )
+  }
 }
 
 export default App;
